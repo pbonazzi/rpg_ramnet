@@ -1,5 +1,5 @@
 from sklearn.metrics import mean_squared_error
-from skimage.measure import compare_ssim as ssim
+from skimage.metrics import structural_similarity as ssim
 import torch
 import numpy as np
 from scipy import ndimage

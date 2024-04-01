@@ -9,7 +9,7 @@ from model.metric import *
 from torch.utils.data import DataLoader, ConcatDataset
 from data_loader.dataset import *
 from trainer.lstm_trainer import LSTMTrainer
-from trainer.trainer_no_recurrent import TrainerNoRecurrent
+#from trainer.trainer_no_recurrent import TrainerNoRecurrent
 from utils.data_augmentation import Compose, RandomRotationFlip, RandomCrop, CenterCrop
 from os.path import join
 import bisect

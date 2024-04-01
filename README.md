@@ -40,8 +40,9 @@ follows (make sure to adapt the CUDA toolkit version according to your setup):
 
 ```bash
 conda create --name RAMNET python=3.7
+conda activate RAMNET
 conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch
-pip install tb-nightly kornia scikit-learn scikit-image opencv-python
+pip install tb-nightly kornia scikit-learn scikit-image opencv-python matplotlib
 ```
 ## Branches
 
