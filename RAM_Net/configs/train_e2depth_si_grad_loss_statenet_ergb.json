@@ -5,11 +5,11 @@
     "data_loader": {
         "train": {
             "type": "SequenceSynchronizedFramesEventsDataset",
-            "base_folder": "dataset_mathias_23_07/train",
+            "base_folder": "train",
             "depth_folder": "depth/data",
             "frame_folder": "rgb/data",
             "flow_folder": "",
-            "event_folder": "events/voxels",
+            "event_folder": "events/data",
             "proba_pause_when_running": 0.0,
             "proba_pause_when_paused": 0.0,
             "step_size": 5000,
@@ -21,11 +21,11 @@
         },
         "validation": {
             "type": "SequenceSynchronizedFramesEventsDataset",
-            "base_folder": "dataset_mathias_23_07/validation",
+            "base_folder": "val",
             "frame_folder": "rgb/data",
             "depth_folder": "depth/data",
             "flow_folder": "",
-            "event_folder": "events/voxels",
+            "event_folder": "events/data",
             "proba_pause_when_running": 0.0,
             "proba_pause_when_paused": 0.0,
             "step_size": 5000,
@@ -53,7 +53,10 @@
     },
     "loss": {
         "type": "scale_invariant_loss",
-        "config": {"weight": 1.0, "n_lambda" : 1.0}
+        "config": {
+            "weight": 1.0,
+            "n_lambda": 1.0
+        }
     },
     "grad_loss": {
         "weight": 0.25
@@ -67,7 +70,7 @@
     "trainer": {
         "epochs": 201,
         "sequence_length": 10,
-        "save_dir": "/data/storage/michelle/e2depth_checkpoints/final_tests",
+        "save_dir": "/archive/sony/pietro/ramnet_eventscape",
         "save_freq": 4,
         "verbosity": 2,
         "monitor": "val_loss",
@@ -76,8 +79,14 @@
         "num_val_previews": 2,
         "still_previews": true,
         "grid_loss": true,
-        "loss_composition": ["image", "events4"],
-        "loss_weights": [1, 1]
+        "loss_composition": [
+            "image",
+            "events4"
+        ],
+        "loss_weights": [
+            1,
+            1
+        ]
     },
     "arch": "ERGB2DepthRecurrent",
     "use_phased_arch": false,
@@ -87,7 +96,10 @@
         "skip_type": "sum",
         "recurrent_block_type": "conv",
         "state_combination": "convgru",
-        "spatial_resolution": [112,112],
+        "spatial_resolution": [
+            112,
+            112
+        ],
         "num_encoders": 3,
         "base_num_channels": 32,
         "num_residual_blocks": 2,

@@ -68,6 +68,13 @@ This work uses the EventScape dataset which can be downloaded here:
 * [Validation Set (12 Gb)](http://rpg.ifi.uzh.ch/data/RAM_Net/dataset/Town05_val.zip)
 * [Test Set (14 Gb)](http://rpg.ifi.uzh.ch/data/RAM_Net/dataset/Town05_test.zip)
 
+To run and prepare the dataset launch this script
+
+```
+chmod u+x download_dataset.sh
+./download_dataset.sh
+```
+
 
 <p align="center">
     <img src="doc/event_scape_s01_preview_w.gif" alt="Video to Events" width="800"/>

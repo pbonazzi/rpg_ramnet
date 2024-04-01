@@ -10,7 +10,7 @@ Specifies the type of dataloader, either SequenceMVSEC or SequenceSynchronizedFr
 ### type2:
 For the branch `asynchronous_irregular_real_data` a second dataset can be specified in order to train on two datasets simultaneously. Also specify the base_folder2 and step_size2 if this is used.
 ### base_folder:
-specify the path of the data folder, starting from the exported path (see README in AMM-Net folder)
+specify the path of the data folder, starting from the exported path (see README in RAM-Net folder)
 ### step_size:
 specifies the number of skipped datapoints before beginning a new sequence. If sequence = 5 and step_size = 5, each datapoint is only seen one during an epoch. If the the step_size is smaller than the sequence_length, datapoints are seen several times. However, step_size > 0 does not actually skip image frames that the network sees, it only defines where a new sequence should be start with respect to the starting data point from the last sequence.
 ### clip_distance:
@@ -21,7 +21,7 @@ defines how many rgb frames are skipped in order to get asynchronous data read i
 ### scale_factor:
 downscales inputs for faster training. 
 ### baseline:
-If `false`, AMM-Net is trained. Other options are `rgb`, `e`, `ergb0`. For the `asynchronous_irregular_real_data` branch only `false` and `rgb` can be used.
+If `false`, RAM-Net is trained. Other options are `rgb`, `e`, `ergb0`. For the `asynchronous_irregular_real_data` branch only `false` and `rgb` can be used.
 
 
 ## trainer:
